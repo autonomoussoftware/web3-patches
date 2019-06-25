@@ -17,6 +17,8 @@
   "repository": "autonomoussoftware/web3-patches",
   "scripts": {
     "prepublishOnly": "tag-matches",
+    "i:darwin:linux:win32": "cd .",
+    "install:darwin:linux:win32": "cd .",
     "postinstall": "run-script-os",
     "postinstall:darwin:linux": "mkdir -p \"$INIT_CWD\"/patches && cp -f patch-files/* \"$INIT_CWD\"/patches && ls \"$INIT_CWD\"/patches",
     "postinstall:win32": "mkdir \"%INIT_CWD%\"\\patches && xcopy /y patch-files\\* \"%INIT_CWD%\"\\patches && dir \"%INIT_CWD%\"\\patches"
