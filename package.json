@@ -1,6 +1,6 @@
 {
   "name": "web3-patches",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Collection of patches to fix web3.js@1.0.0-beta.37",
   "keywords": [
     "bug",
