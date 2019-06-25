@@ -17,10 +17,11 @@
   "repository": "autonomoussoftware/web3-patches",
   "scripts": {
     "prepublishOnly": "tag-matches",
-    "postinstall": "npm run copypatches",
-    "copypatches": "run-script-os",
-    "copypatches:darwin:linux": "if [ \"$PWD\" != \"$INIT_CWD\" ] ; then mkdir -p \"$INIT_CWD\"/patches && cp -f patches/* \"$INIT_CWD\"/patches ; fi",
-    "copypatches:win32": "if not \"%PWD%\" == \"%INIT_CWD%\" (mkdir \"%INIT_CWD%\"\\patches && xcopy /y patches\\* \"%INIT_CWD%\"\\patches)"
+    "i:darwin:linux:win32": "echo .",
+    "install:darwin:linux:win32": "echo .",
+    "postinstall": "run-script-os",
+    "postinstall:darwin:linux": "if [ \"$PWD\" != \"$INIT_CWD\" ] ; then mkdir -p \"$INIT_CWD\"/patches && cp -f patches/* \"$INIT_CWD\"/patches ; fi",
+    "postinstall:win32": "if not \"%PWD%\" == \"%INIT_CWD%\" (mkdir \"%INIT_CWD%\"\\patches && xcopy /y patches\\* \"%INIT_CWD%\"\\patches)"
   },
   "dependencies": {
     "patch-package": "^5.0.0",
