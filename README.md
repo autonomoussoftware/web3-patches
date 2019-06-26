@@ -10,7 +10,7 @@ Collection of patches to fix [web3.js@1.0.0-beta.37](https://github.com/ethereum
 npm install --save web3-patches
 ```
 
-Once installed, the latest collection of patches will be copied to the `patches` folder so `patch-package` can apply those.
+Once installed, the latest collection of patches in the `patch-files` folder of the repo *shall be copied and committed* into the `patches` folder so `patch-package` can apply those.
 
 ## License
 

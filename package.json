@@ -16,20 +16,14 @@
   ],
   "repository": "autonomoussoftware/web3-patches",
   "scripts": {
-    "prepublishOnly": "tag-matches",
-    "i:darwin:linux:win32": "cd .",
-    "install:darwin:linux:win32": "cd .",
-    "postinstall": "run-script-os",
-    "postinstall:darwin:linux": "mkdir -p \"$INIT_CWD\"/patches && cp -f ./patch-files/* \"$INIT_CWD\"/patches && ls \"$INIT_CWD\"/patches",
-    "postinstall:win32": "mkdir \"%INIT_CWD%\"\\patches && xcopy /y .\\patch-files\\* \"%INIT_CWD%\"\\patches && dir \"%INIT_CWD%\"\\patches"
+    "prepublishOnly": "tag-matches"
   },
   "dependencies": {
     "patch-package": "^5.0.0",
     "websocket-reconnector": "^1.1.1"
   },
   "devDependencies": {
-    "check-tag-matches": "^1.0.0",
-    "run-script-os": "gabmontes/run-script-os#dfc9ad5"
+    "check-tag-matches": "^1.0.0"
   },
   "peerDependencies": {
     "web3": "1.0.0-beta.37"
